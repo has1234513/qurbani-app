@@ -19,7 +19,13 @@ export default function RootLayout({ children }) {
       }}
     >
       <html lang='en'>
-        <body className={inter.className}>
+        <body className={inter.className}
+          style={{
+            backgroundImage: "url('/images//Qurbani-bg.jpg", // Replace '/images/background.jpg' with the path to your image file
+            backgroundSize: 'cover',    // This will ensure that the background covers the entire div
+            backgroundPosition: 'center' // This centers the background image within the div
+        }}
+        >
           <Header />
           <main className='container mx-auto'>
             <div className='flex items-start justify-center min-h-screen'>

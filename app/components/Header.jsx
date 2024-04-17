@@ -9,7 +9,7 @@ const Header = async ({ username }) => {
       <div className='flex items-center'>
         <Link href='/'>
           <div className='text-lg font-bold text-white uppercase'>
-            Clerk App
+            The Qurbani platform
           </div>
         </Link>
       </div>
