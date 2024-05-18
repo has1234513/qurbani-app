@@ -1,37 +1,38 @@
 import Link from 'next/link';
 import { UserButton, auth } from '@clerk/nextjs';
+import Image from 'next/image';
+import qurbaniLogo from '../../public/images/qurbani-logo.png';
 
 const Header = async ({ username }) => {
   const { userId } = auth();
 
   return (
-    <nav className='flex items-center justify-between px-6 py-4 mb-5 bg-blue-700'>
+    <nav className='flex items-center justify-between px-4 py-3 sm:px-6 sm:py-4 mb-5 bg-green-700'>
       <div className='flex items-center'>
         <Link href='/'>
           <div className='text-lg font-bold text-white uppercase'>
-            The Qurbani platform
+            <Image src={qurbaniLogo} alt='Qurbani Platform Logo' height={30} />
           </div>
         </Link>
       </div>
       <div className='flex items-center text-white'>
-        {!userId && (
+        {!userId ? (
           <>
             <Link
               href='sign-in'
-              className='text-gray-300 hover:text-white mr-4'
+              className='text-sm sm:text-base text-gray-300 hover:text-white mr-3 sm:mr-4'
             >
               Sign In
             </Link>
             <Link
               href='sign-up'
-              className='text-gray-300 hover:text-white mr-4'
+              className='text-sm sm:text-base text-gray-300 hover:text-white mr-3 sm:mr-4'
             >
               Sign Up
             </Link>
           </>
-        )}
-        {userId && (
-          <Link href='profile' className='text-gray-300 hover:text-white mr-4'>
+        ) : (
+          <Link href='profile' className='text-sm sm:text-base text-gray-300 hover:text-white mr-3 sm:mr-4'>
             Profile
           </Link>
         )}
