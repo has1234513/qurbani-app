@@ -22,13 +22,7 @@ const Header = async ({ username }) => {
               href='sign-in'
               className='text-sm sm:text-base text-gray-300 hover:text-white mr-3 sm:mr-4'
             >
-              Sign In
-            </Link>
-            <Link
-              href='sign-up'
-              className='text-sm sm:text-base text-gray-300 hover:text-white mr-3 sm:mr-4'
-            >
-              Sign Up
+              Log in
             </Link>
           </>
         ) : (
